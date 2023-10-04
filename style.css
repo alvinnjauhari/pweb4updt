@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Play&family=VT323&display=swap');
+
+:root{
+    --main-color : #ffffff ;
+    --header-color : #000;
+    --body-color : #fff;
+    --header-font-color : #000000;
+    --shadow : 0 2px 2px rgb(0 0 0 / 0.5);
+
+
+    --body-font : "VT323" , monospace;
+
+}
+
+body{
+    font-family: var(--body-font);
+    width: 100%;
+    margin: 0 auto;
+    min-height: 3214px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+.fixed-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+.header-container {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Mengatur tampilan vertikal */
+    align-items: center; /* Pusatkan secara horizontal */
+    justify-content: center; /* Pusatkan secara vertikal */
+    height: 100px; /* Sesuaikan tinggi header sesuai kebutuhan */
+}
+
+.header-text {
+    background-color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+}
+
+.header-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row; /* Mengatur tampilan horizontal */
+    align-items: center;
+}
+
+.header-menu ul p{
+    font-size: 2rem;
+}
+
+.menu-item {
+    margin-right: 10px; /* Menambahkan ruang antara elemen menu jika diperlukan */
+}
+
+.menu-link {
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan menu */
+}
+
+.content-wrap {
+    position: relative;
+    width: 100%;
+    min-height: 807px;
+    background-image: url(./img/bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Pseudo-element ::before for background */
+.content-wrap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.content-wrap .content1-text {
+    text-align: left;
+    z-index: 1;
+}
+
+.content-wrap .content1-text h3 {
+    font-size: 4rem;
+    color: rgba(255, 0, 0, 1);
+    font-weight: lighter;
+    text-shadow: 
+        -3px -3px 0 #000, /* Bayangan atas kiri */
+         3px -3px 0 #000, /* Bayangan atas kanan */
+        -3px  3px 0 #000, /* Bayangan bawah kiri */
+         3px  3px 0 #000; /* Bayangan bawah kanan */
+}
+
+.content-wrap .content1-text h1 {
+    font-size: 8rem;
+    color: #fff;
+    font-weight: lighter;
+    text-shadow: 
+        -3px -3px 0 #000, 
+         3px -3px 0 #000, 
+        -3px  3px 0 #000, 
+         3px  3px 0 #000; 
+}
+
+.content-wrap .content1-text p {
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.content-wrap .content1-btn{
+    z-index: 1;
+    font-size: 1.5rem;
+    margin-top: 40px;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 15px 30px;
+}
+
+.content1-btn:hover{
+    background-color: rgb(199, 0, 0);
+    color: black;
+}
+
+.content2-wrap {
+    position: relative;
+    width: 100%;
+    min-height: 807px;
+    background-image: url(./img/bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+}
+
+.content2-wrap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.content2-wrap .content2-wrap1{
+    z-index: 1;
+    min-height: 217px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.content2-wrap1 h3{
+    background-color: transparent;
+    color: #fff;
+    text-shadow: 
+        -3px -3px 0 #000, 
+         3px -3px 0 #000, 
+        -3px  3px 0 #000, 
+         3px  3px 0 #000; 
+    font-size: 6rem;
+    margin-left: 414px;
+    margin-right: 378px;
+}
+
+
+.content2-wrap .content2-wrap2{
+    z-index: 1;
+    min-height: 330px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.vertical-line{
+    width: 6px; /* Ketebalan garis */
+    height: 314px; /* Tinggi garis sesuai kebutuhan */
+    background-color: #fe0000; /* Warna garis, sesuaikan dengan warna yang Anda inginkan */
+    margin-left: 162px;
+    margin-right: 162px;
+}
+
+
+
+.content2-wrap .content2-wrap3{
+    z-index: 1;
+    min-height: 260px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-items: center;
+}
+
+.content2-wrap3 .right-text{
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 
+        -3px -3px 0 #000, 
+         3px -3px 0 #000, 
+        -3px  3px 0 #000, 
+         3px  3px 0 #000; 
+    text-align: center;
+    margin-left: 250px;
+    margin-top: 30px;
+}
+
+.content2-wrap3 .left-text{
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 
+        -3px -3px 0 #000, 
+         3px -3px 0 #000, 
+        -3px  3px 0 #000, 
+         3px  3px 0 #000; 
+    text-align: center;
+    margin-left: 270px;
+    margin-top: 30px;
+}
+
+
+.content3-wrap {
+    position: relative;
+    width: 100%;
+    min-height: 807px;
+    background-image: url(./img/bg3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content3-wrap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.content3-wrap .content3-wrap1{
+    z-index: 1;
+    min-height: 137px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.content3-wrap1 h3{
+    font-size: 6rem;
+    background-color: transparent;
+    color: yellow;
+    text-shadow: 
+        -3px -3px 0 #000, 
+         3px -3px 0 #000, 
+        -3px  3px 0 #000, 
+         3px  3px 0 #000; 
+}
+
+
+.content3-wrap .content3-wrap2{
+    z-index: 1;
+    min-height: 558px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.content3-wrap .content3-wrap3{
+    z-index: 1;
+    min-height: 112px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.content3-wrap3 p{
+    font-size: 2rem;
+    color: white;
+    text-shadow: 
+        -3px -3px 0 #000, 
+         3px -3px 0 #000, 
+        -3px  3px 0 #000, 
+         3px  3px 0 #000; 
+}
+
+.content4-wrap {
+    position: relative;
+    width: 100%;
+    min-height: 807px;
+    background-image: url(./img/bg4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content4-wrap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.content4-wrap .content4-wrap1{
+    z-index: 1;
+    min-height: 254px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.content4-wrap1 h3{
+    font-size: 6rem;
+    color: #fe0000;
+    text-shadow: 
+        -3px -3px 0 #000, 
+         3px -3px 0 #000, 
+        -3px  3px 0 #000, 
+         3px  3px 0 #000; 
+    margin-bottom: 30px;
+}
+
+.content4-wrap .content4-wrap2{
+    z-index: 1;
+    min-height: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.content4-wrap2 p{
+    margin-left: 150px;
+    font-size: 5rem;
+    background-image: url;
+}
+
+.content4-wrap .content4-wrap3{
+    z-index: 1;
+    font-size: 3rem;
+    color: #fe0000;
+    text-shadow: 
+        -3px -3px 0 #000, 
+         3px -3px 0 #000, 
+        -3px  3px 0 #000, 
+         3px  3px 0 #000; 
+    margin-top: 50px;
+}
+

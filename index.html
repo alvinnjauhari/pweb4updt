@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Alvin & Fidela Wedding</title>
+</head>
+<audio loop id="myAudio" src="audio/rts.m4a"></audio>
+<body>
+    <header class="fixed-header">
+        <div class="header-container">
+            <div class="header-text">
+                <h3>Petrucci & Taylor Wedding</h3>
+            </div>
+            <nav class="header-menu">
+                <ul>
+                    <li class="menu-item"><a href="https://www.instagram.com/alvinnjauhari/" target="_blank" class="menu-link"><img src="./img/heart.png" width="32" height="32"></a></li>
+                    <li class="menu-item"><a href="https://www.youtube.com/channel/UCa_3wAGtLZJK6nZ9IeMFBYQ" target="_blank" class="menu-link"><img src="./img/house.png" width="32" height="32"></a></li>
+                    <li class="menu-item"><a href="https://twitter.com/vinsrailcoustic" target="_blank" class="menu-link"><img src="./img/clock.png" width="32" height="32"></a></li>
+                    <li class="menu-item"><p>ABOUT US</p></li>
+                    <li class="menu-item"><a href="" target="_blank" class="menu-link"><img src="./img/camer.png" width="32" height="32"></a></li>
+                    <li class="menu-item"><a href="" target="_blank" class="menu-link"><img src="./img/fax.png" width="32" height="32"></a></li>
+                    <li class="menu-item"><a href="" target="_blank" class="menu-link"><img src="./img/guitar.png" width="32" height="32"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <content-home>
+        <nav class="content-wrap">
+            <div class="content1-text">
+                <h3>Love Story Of</h3>
+                <h1>PETRUCCI & TAYLOR</h1>
+                <p>Barcelona, 6 March 2026</p>
+            </div>
+            <div class="content1-btn" id="content1-btn">
+                <a href="#">LETS ROCKK!!!</a>
+            </div>
+        </nav>
+        <nav class="content2-wrap">
+            <section class="content2-wrap1">
+                <div class="photo-1">
+                    <img src="./img/saxo.png" width="79" height="82">
+                </div>
+                <div>
+                    <h3>About Us</h3>
+                </div>
+                <div class="photo-2">
+                    <img src="./img/heart-transp.png" width="108" height="106">
+                </div>
+            </section>
+            <section class="content2-wrap2">
+                <img src="./img/mail.png">
+                <div class="vertical-line"></div>
+                <img src="./img/meme.png">
+            </section>
+            <section class="content2-wrap3">
+                <div class="left-text">
+                    <p>John Petrucci</p>
+                    <p>Putra</p>
+                    <p>Bapak Messi & Ibu Putri</p>
+                </div>
+                <div class="right-text">
+                    <p>Taylor Swift</p>
+                    <p>Putri</p>
+                    <p>Bapak Iskandar & Ibu Ross</p>
+                </div>
+            </section>
+        </nav>
+        <nav class="content3-wrap">
+            <section class="content3-wrap1">
+                    <h3>Location</h3>
+            </section>
+            <section class="content3-wrap2">
+                <a href="https://www.google.com/maps/place/Camp+Nou/@41.3809,2.1202449,17z/data=!3m2!4b1!5s0x12a498f5c19b248d:0x3333a570c673257c!4m6!3m5!1s0x12a498f576297baf:0x44f65330fe1b04b9!8m2!3d41.380896!4d2.1228198!16zL20vMDFnZ2ps?entry=ttu" target="_blank" class="menu-link">
+                    <img src="./img/Basemap image.png" alt=""></a>
+            </section>
+            <section class="content3-wrap3">
+                <p>C/ d'Arístides Maillol, 12, 08028 Barcelona, Spanyol</p>
+            </section>
+        </nav>
+        <nav class="content4-wrap">
+            <section class="content4-wrap1">
+                <h3>Date & Time</h3>
+            </section>
+            <section class="content4-wrap2">
+                <div class="calendar">
+                    <a href="https://www.timeanddate.com/calendar/monthly.html?year=2026&month=3&country=65"target="_blank" class="menu-link">
+                        <img src="./img/march.png">
+                    </a>
+                </div>
+                <div class="timer-countdown">
+                    <p id="demo"></p>
+                </div>
+            </section>
+            <section class="content4-wrap3">
+                <p>Barcelona, 6 March 2026 06.34 AM</p>
+            </section>
+        </nav>
+    </content-home>
+    <script>
+        var countDownDate = new Date("Mar 6, 2024 15:37:25").getTime();
+        var x = setInterval(function() {
+          var now = new Date().getTime();
+          var distance = countDownDate - now;
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "SUDAH SAH YGY";
+          }
+        }, 1000);
+    </script>
+    <script>
+       var button = document.getElementById("content1-btn");
+
+// Dapatkan elemen audio dengan ID myAudio
+var audio = document.getElementById("myAudio");
+
+// Tambahkan event listener untuk menghandle klik tombol
+button.addEventListener("click", function() {
+    // Periksa apakah audio sedang dimainkan
+    if (audio.paused) {
+        // Jika audio sedang tidak dimainkan, putar audio
+        audio.play();
+    } else {
+        // Jika audio sedang dimainkan, jeda audio
+        audio.pause();
+    }
+});
+    </script>
+</body>
+</html>
